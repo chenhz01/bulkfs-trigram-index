@@ -4,6 +4,8 @@ Portable whole-tree filename search built from three public primitives — bulk 
 
 **Confidence: High (≥80%)** that composition of the three primitives is correct and portable (self_test covers 17 cases incl. unicode and 200-char names). **Confidence: Medium (60–79%)** that latency approaches the 0.1 ms class of native implementations — SQLite lookup adds overhead; our measured numbers are in the milliseconds, not microseconds.
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 Desktop search usually means either platform-private machinery (Spotlight metadata APIs, NTFS USN journals — fast but OS-locked) or heavyweight daemons that re-index everything. For a portable tool or a scripting workflow, both are wrong-sized.
